@@ -84,7 +84,7 @@ a:focus-visible {
 
 .top ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
 
-/* Rows: label on the left, content on the right */
+/* Rows: the section label sits above its content, and beside it from 64rem */
 .row {
   padding: 2.25rem 0 2.75rem;
   border-bottom: 1px solid var(--rule);
