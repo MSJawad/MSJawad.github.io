@@ -1,53 +1,230 @@
-body{
+/* Public Sans, SIL Open Font License 1.1 (fonts/OFL-PublicSans.txt).
+   Static 400 and 600 instances cut from the variable font and subset to Latin. */
+@font-face { font-family: "Public Sans"; src: url("fonts/ps-reg.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Public Sans"; src: url("fonts/ps-semi.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+
+:root {
+  --paper: #fbfbfa;
+  --ink: #141414;
+  --muted: #5d5d5b;
+  --rule: #e1e1de;
+  --rule-strong: #141414;
+  --line: #b9b9b5;
+  --accent: #b73a0b;
+  --label: 12rem;
+  --pad: clamp(1.25rem, 3.5vw, 3rem);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121212;
+    --ink: #ececea;
+    --muted: #a2a29e;
+    --rule: #2b2b2a;
+    --rule-strong: #ececea;
+    --line: #5a5a57;
+    --accent: #ff8f5c;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  font-variant-numeric: proportional-nums lining-nums;
+}
+
+.page {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+p, h1, h2, h3, ul, ol, dl, dd { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+a:hover { text-decoration-color: var(--accent); }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+/* Top line */
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding: 1.5rem 0 1.2rem;
+  border-bottom: 2px solid var(--rule-strong);
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.top ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+
+/* Rows: the section label sits above its content, and beside it from 64rem */
+.row {
+  padding: 2.25rem 0 2.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.intro { padding-top: 3rem; }
+.intro .label { display: none; }
+
+.lede {
+  font-variant-numeric: proportional-nums;
+  max-width: 34ch;
+  font-size: clamp(1.4rem, 1.05rem + 1.4vw, 2.05rem);
+  line-height: 1.24;
+  letter-spacing: -0.012em;
+  margin-bottom: 1.25rem;
+}
+
+.intro .body > p:not(.lede) { max-width: 38rem; color: var(--muted); }
+
+/* Work ledger */
+.job {
+  display: grid;
+  gap: 0.15rem 2rem;
+  padding: 1.15rem 0 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.ledger > .job:first-child { border-top: 0; padding-top: 0; }
+
+.dates { font-size: 0.875rem; color: var(--muted); white-space: nowrap; }
+.to { padding: 0 0.15em; }
+
+.who h3 { font-size: 1rem; font-weight: 600; }
+.who p { color: var(--muted); }
+
+.what { max-width: 40rem; margin-top: 0.5rem; }
+.what p + p { margin-top: 0.6rem; }
+.runin { font-weight: 600; }
+
+.edu { border-top: 0; padding: 0; }
+
+/* Projects */
+.project {
+  display: grid;
+  gap: 1rem 2.5rem;
+  padding-bottom: 2.25rem;
+}
+.project + .project { padding-top: 2.25rem; border-top: 1px solid var(--rule); }
+
+.project img {
+  display: block;
+  box-sizing: content-box;
+  width: calc(100% - 2px);
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.project h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.4rem; }
+.project .text p + p { margin-top: 0.75rem; }
+.stack { font-size: 0.875rem; color: var(--muted); }
+.links a + a { margin-left: 1.25rem; }
+
+.also-h {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 0.4rem;
+}
+
+.also li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1rem 1.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.also li:last-child { border-bottom: 0; }
+.also a { font-weight: 600; grid-column: 1; }
+.also span { grid-column: 1; color: var(--muted); }
+.also .lang { grid-column: 2; grid-row: 1; font-size: 0.875rem; text-align: right; }
+
+/* Contact */
+.contact {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0.55rem 1rem;
+}
+.contact dt { color: var(--muted); font-size: 0.875rem; padding-top: 0.12em; }
+.contact dd { overflow-wrap: anywhere; }
+
+footer {
+  padding: 1.5rem 0 3rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Two-column ledger from tablet width up */
+@media (min-width: 46rem) {
+  .job { grid-template-columns: 9.5rem minmax(0, 1fr); }
+  .job .who, .job .what { grid-column: 2; }
+  .job .dates { grid-row: 1 / span 2; padding-top: 0.1em; }
+  .also li { grid-template-columns: 9.5rem minmax(0, 1fr) auto; column-gap: 2rem; }
+  .also a { grid-column: 1; grid-row: 1; }
+  .also span { grid-column: 2; grid-row: 1; }
+  .also .lang { grid-column: 3; }
+}
+
+/* Section labels move to their own column on wide screens and stay in view */
+@media (min-width: 64rem) {
+  .row {
+    display: grid;
+    grid-template-columns: var(--label) minmax(0, 1fr);
+    column-gap: 2rem;
+  }
+  .label {
+    position: sticky;
+    top: 1.5rem;
+    align-self: start;
     margin: 0;
-    padding: 0;
-    background: no-repeat;
-    background-size: cover;
-    padding-bottom:20px;
+    padding-top: 0.12em;
+  }
+  .intro .label { display: block; }
+  .job { grid-template-columns: 9.5rem minmax(0, 15rem) minmax(0, 1fr); }
+  .job .dates { grid-row: auto; }
+  .job .who { grid-column: 2; }
+  .job .what { grid-column: 3; margin-top: 0; }
+  .edu .who { grid-column: 2 / span 2; }
+  .project { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: start; }
 }
-.box{
-    width: 450px;
-    background: rgba(0, 0, 0, 0);
-    padding: 40px;
-    text-align: center;
-    margin: auto;
-    margin-top:10%;
-    color: black;
-    font-family: 'Century Gothic', sans-serif;
-}
-.box h1{
-    font-size: 30px;
-    font-weight: 100;
-}
-.box h5{
-    font-size: 15px;
-    letter-spacing:1px;
-    font-weight: 100;
-}
-.box h5 a{
-    color: #0B829F;
-    text-decoration: none;
-}
-.box p{
-    text-align: center;
-}
-ul{
-    margin: 0;
-    padding: 0;
-}
-.box li{
-    display: inline-block;
-    margin:6px;
-    list-style: none;
-}
-.box li a {
-    color: grey;
-    text-decoration: none;
-    font-size: 40px;
-    letter-spacing: 20px;
-    transition: all ease-in-out 250ms;
-}
-.box li a:hover{
-    color: lightgreen;
-    display:block;
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
 }
