@@ -1,42 +1,149 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="icon" type="image/x-icon" href="initials.ico">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Solaiman Jawad</title>
+<meta name="description" content="Solaiman Jawad, software engineer. Founding engineer at MyHiringSpace, previously AWS. Work history, projects, resume and contact.">
+<meta property="og:title" content="Solaiman Jawad">
+<meta property="og:description" content="Software engineer. Founding engineer at MyHiringSpace, previously AWS.">
+<meta property="og:type" content="website">
+<link rel="icon" href="initials.ico">
+<link rel="preload" href="fonts/ps-reg.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
 
-        <link rel="stylesheet" href="style.css">
-        <title>Solaiman Jawad</title>
-    </head>
-    <body>
-        <div class="box">
-            <h1>Solaiman <b>Jawad<b></h1>
-            <h5> Software Development Engineer at <a
-                                                          href="https://aws.amazon.com">AWS</a> <br> <br>
-                Previously 
-             API performance at <a
-                 href="https://www.hivestack.com">Hivestack</a>;
-             fullstack development at <a href="https://alida.com">Alida</a>; 
-             Order Creation front-end at <a href="https://pointclickcare.com">PointClickCare</a>;
-             Fintech tools at <a href= "https://www.electrosource.com/">Electro Source</a>;
-             Computer Vision at <a
-                 href="https://www.intelerad.com/en/">Intelerad Medical Systems</a>. 
+<header class="top">
+  <h1 class="name">Solaiman Jawad</h1>
+  <nav aria-label="Contact and profiles">
+    <ul>
+      <li><a href="mailto:solaimanjawad@gmail.com">Email</a></li>
+      <li><a href="https://github.com/MSJawad">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/solaiman-jawad/">LinkedIn</a></li>
+      <li><a href="solaiman_jawad_resume.pdf">Resume</a></li>
+    </ul>
+  </nav>
+</header>
 
-             <br>
-             Computational Mathematics <a href="https://uwaterloo.ca/">@UWaterloo</a>, Class of '22.
- </h5>
-            <ul>
-                
-                <li><div title="Mail"><a href="mailto:msjawad@uwaterloo.ca"><i class="far
-                fa-envelope"></i></a></div></li>
-                <li><div title="LinkedIn"><a
-                            href="https://www.linkedin.com/in/solaiman-jawad/"><i
-                            class="fab fa-linkedin-in"></i></a></div></li>          
-                <li><div title="GitHub"><a href="https://github.com/MSJawad"><i class="fab
-                fa-github"></i></a></div></li>
-                <li><div title="Resume"><a href="solaiman_jawad_resume.pdf"><i class="far
-                fa-file-pdf"></i></a></div></li>
-            </ul>
+<main>
+  <div class="row intro">
+    <p class="label" aria-hidden="true"></p>
+    <div class="body">
+      <p class="lede">Software engineer. Founding engineer at MyHiringSpace since October&nbsp;2025, and before that at Amazon Web Services on Network Load Balancing and API&nbsp;Gateway.</p>
+      <p>I studied computational mathematics at Waterloo. On the side I build small services and run them myself; the two below are live on one Arm server, and one of them monitors the other.</p>
+    </div>
+  </div>
+
+  <section class="row" aria-labelledby="h-work">
+    <h2 class="label" id="h-work">Work</h2>
+    <div class="body">
+      <ol class="ledger">
+        <li class="job">
+          <p class="dates"><span>Oct 2025</span> <span class="to">to</span> <span>now</span></p>
+          <div class="who"><h3>MyHiringSpace</h3><p>Founding Software Engineer, remote</p></div>
+          <div class="what">
+            <p>I built the product, an LLM-driven candidate retrieval platform: it sources candidates, scores them against the role, surfaces contact details and tracks each one through the hiring pipeline. I own the technical roadmap and the platform architecture, and took it from the first commit to paying customers.</p>
+            <p>I designed the evaluation framework for search quality, and used it to cut LLM cost per search by 74% while prompt optimization offset keyword degradation and improved overall accuracy.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="dates"><span>Jan 2023</span> <span class="to">to</span> <span>Oct 2024</span></p>
+          <div class="who"><h3>Amazon Web Services</h3><p>Software Development Engineer</p></div>
+          <div class="what">
+            <p><span class="runin">Network Load Balancing.</span> Connectivity canaries that expose availability metrics and measure the dataplane&rsquo;s config propagation path; they cut the blast radius of new deployments by 13%. Capacity placement controls that let resource deallocation run concurrently and safely. Packet capture tooling on the dataplane routing processes for live traffic analysis.</p>
+            <p><span class="runin">API Gateway.</span> Automated the regional service build with chained workflows, CDK and the retirement of several disaster runbooks: 32 days of manual work became 4 hours. Cache prewarming and exponential jitter on fleet records cut peak transactions by 28% during table rollover.</p>
+          </div>
+        </li>
+        <li class="job">
+          <p class="dates"><span>Sep 2022</span> <span class="to">to</span> <span>Dec 2022</span></p>
+          <div class="who"><h3>Hivestack</h3><p>Junior Software Developer, Campaigns</p></div>
+          <div class="what"><p>Moved the ad campaign API&rsquo;s runtime operations onto background workers through job queues, and remodeled vendors and products so deals could be grouped by location.</p></div>
+        </li>
+        <li class="job">
+          <p class="dates"><span>Sep 2021</span> <span class="to">to</span> <span>Apr 2022</span></p>
+          <div class="who"><h3>Alida</h3><p>Software Development Intern, Touchpoint Microsurveys</p></div>
+          <div class="what"><p>Page templates that add actions to adverts; engagement went up 6%.</p></div>
+        </li>
+        <li class="job">
+          <p class="dates"><span>Jun 2020</span> <span class="to">to</span> <span>Aug 2020</span></p>
+          <div class="who"><h3>Electro Source</h3><p>Software Developer, SR&amp;ED Credit Tracker</p></div>
+          <div class="what"><p>A work management program for SR&amp;ED tax-claimable projects. Moving its infrastructure to code, with host scaling and data retention policies, saved more than $12,000 a year.</p></div>
+        </li>
+        <li class="job">
+          <p class="dates"><span>Sep 2019</span> <span class="to">to</span> <span>Dec 2019</span></p>
+          <div class="who"><h3>Intelerad Medical Systems</h3><p>Software Developer Intern, Machine Learning</p></div>
+          <div class="what"><p>Neural networks that classify chest X-ray viewing angles, to automate the hanging protocol.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="h-projects">
+    <h2 class="label" id="h-projects">Projects</h2>
+    <div class="body">
+      <article class="project" aria-labelledby="h-af">
+        <img src="img/af-720.webp" srcset="img/af-720.webp 720w, img/af-1280.webp 1280w" sizes="(min-width: 75rem) 34rem, (min-width: 56rem) 52vw, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="apartment-finder: a form for adding a listing and weighting sliders on the left, and a street map on the right with one listing pinned and scored 85.">
+        <div class="text">
+          <h3 id="h-af">apartment-finder</h3>
+          <p>Scores apartment listings out of 100 by rent, size, and the walk or bike ride to the supermarket, tram stop, pharmacy and gym. It began as a spreadsheet with some Apps Script. A worker geocodes each listing, finds the nearest places in PostGIS and asks two self-hosted OSRM routers for travel times; Flux deploys every merge to main and rolls back a release that doesn&rsquo;t come up.</p>
+          <p class="stack">Go, PostgreSQL with PostGIS, OSRM, k3s, Helm, Flux</p>
+          <p class="links"><a href="https://92-5-186-10.sslip.io">Live</a> <a href="https://github.com/MSJawad/apartment-finder">Source</a></p>
         </div>
-    </body>
+      </article>
+
+      <article class="project" aria-labelledby="h-sm">
+        <img src="img/sm-720.webp" srcset="img/sm-720.webp 720w, img/sm-1280.webp 1280w" sizes="(min-width: 75rem) 34rem, (min-width: 56rem) 52vw, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="synthetic-monitor status page: all checks up, 16 ms latency, 99.941% availability against a 99.5% target, and a 90-day uptime bar.">
+        <div class="text">
+          <h3 id="h-sm">synthetic-monitor</h3>
+          <p>Checks services from the outside, the way a user would, and alerts when one breaks and when it recovers. HTTP, multi-step, TCP, DNS, TLS and heartbeat checks; uptime tracked against an SLO; a status page with 90 days of history. One Go process and SQLite. It pings healthchecks.io every minute, so it can&rsquo;t die quietly.</p>
+          <p class="stack">Go, SQLite, Prometheus, ntfy</p>
+          <p class="links"><a href="https://status.92-5-186-10.sslip.io">Status page</a> <a href="https://github.com/MSJawad/synthetic-monitor">Source</a></p>
+        </div>
+      </article>
+
+      <h3 class="also-h">Also on GitHub</h3>
+      <ul class="also">
+        <li><a href="https://github.com/MSJawad/mapreduce">mapreduce</a><span>Fault-tolerant MapReduce over TCP: task leases, backup attempts for slow workers, atomic output commits.</span><span class="lang">Go</span></li>
+        <li><a href="https://github.com/MSJawad/restTorrent">restTorrent</a><span>BitTorrent client with no runtime dependencies, rarest-first piece selection and a REST API.</span><span class="lang">TypeScript</span></li>
+        <li><a href="https://github.com/MSJawad/pathfinder">pathfinder</a><span>A*, Dijkstra and BFS racing through the same generated maze.</span><span class="lang">C++</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="h-edu">
+    <h2 class="label" id="h-edu">Education</h2>
+    <div class="body">
+      <div class="job edu">
+        <p class="dates"><span>Sep 2017</span> <span class="to">to</span> <span>Sep 2022</span></p>
+        <div class="who"><h3>University of Waterloo</h3><p>Honours Bachelor of Computational Mathematics, Computing Technology option</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="h-contact">
+    <h2 class="label" id="h-contact">Contact</h2>
+    <div class="body">
+      <dl class="contact">
+        <dt>Email</dt>
+        <dd><a href="mailto:solaimanjawad@gmail.com">solaimanjawad@gmail.com</a></dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/MSJawad">github.com/MSJawad</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/solaiman-jawad/">linkedin.com/in/solaiman-jawad</a></dd>
+        <dt>Resume</dt>
+        <dd><a href="solaiman_jawad_resume.pdf">solaiman_jawad_resume.pdf</a></dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Updated 4 November 2026</p>
+</footer>
+
+</div>
+</body>
 </html>
