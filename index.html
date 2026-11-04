@@ -85,7 +85,7 @@
     <h2 class="label" id="h-projects">Projects</h2>
     <div class="body">
       <article class="project" aria-labelledby="h-af">
-        <img src="img/af-720.webp" srcset="img/af-720.webp 720w, img/af-1280.webp 1280w" sizes="(min-width: 75rem) 34rem, (min-width: 56rem) 52vw, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="apartment-finder: the &ldquo;What matters to you&rdquo; panel, with sliders that weight warm rent per m&sup2;, size and rooms.">
+        <img src="img/af-720.webp" srcset="img/af-720.webp 720w, img/af-1280.webp 1280w" sizes="(min-width: 64rem) 32rem, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="apartment-finder: the &ldquo;What matters to you&rdquo; panel, with sliders that weight warm rent per m&sup2;, size and rooms.">
         <div class="text">
           <h3 id="h-af">apartment-finder</h3>
           <p>Scores apartment listings out of 100 by rent, size, and the walk or bike ride to the supermarket, tram stop, pharmacy and gym. It began as a spreadsheet with some Apps Script. A worker geocodes each listing, finds the nearest places in PostGIS and asks two self-hosted OSRM routers for travel times; Flux deploys every merge to main and rolls back a release that doesn&rsquo;t come up.</p>
@@ -95,7 +95,7 @@
       </article>
 
       <article class="project" aria-labelledby="h-sm">
-        <img src="img/sm-720.webp" srcset="img/sm-720.webp 720w, img/sm-1280.webp 1280w" sizes="(min-width: 75rem) 34rem, (min-width: 56rem) 52vw, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="synthetic-monitor status page: all checks up, 16 ms latency, 99.941% availability against a 99.5% target, and a 90-day uptime bar.">
+        <img src="img/sm-720.webp" srcset="img/sm-720.webp 720w, img/sm-1280.webp 1280w" sizes="(min-width: 64rem) 32rem, calc(100vw - 2.5rem)" width="1280" height="800" loading="lazy" alt="synthetic-monitor status page: all checks up, 16 ms latency, 99.941% availability against a 99.5% target, and a 90-day uptime bar.">
         <div class="text">
           <h3 id="h-sm">synthetic-monitor</h3>
           <p>Checks services from the outside, the way a user would, and alerts when one breaks and when it recovers. HTTP, multi-step, TCP, DNS, TLS and heartbeat checks; uptime tracked against an SLO; a status page with 90 days of history. One Go process and SQLite. It pings healthchecks.io every minute, so it can&rsquo;t die quietly.</p>
